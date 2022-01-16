@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string></string>
+	<string>give me perm</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>give me perm</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

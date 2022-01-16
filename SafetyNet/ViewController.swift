@@ -12,9 +12,9 @@ import GooglePlaces
 
 
 var locationsTuple: [(lat: CLLocationDegrees, long: CLLocationDegrees)] = []
-var counter = 0
+var locationCounter = 0
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, GMSAutocompleteViewControllerDelegate {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -23,11 +23,32 @@ class ViewController: UIViewController {
 	@IBOutlet weak var homeLocation: UITextField!
 	@IBOutlet weak var destinationTextField: UITextField!
 	@IBOutlet weak var userDate: UIDatePicker!
+	@IBOutlet weak var extraInfo: UITextField!
+	@IBOutlet weak var contactNumber3: UITextField!
+	@IBOutlet weak var contactName3: UITextField!
+	@IBOutlet weak var contactNumber2: UITextField!
+	@IBOutlet weak var contactName2: UITextField!
+	@IBOutlet weak var contactNumber1: UITextField!
+	@IBOutlet weak var contactName1: UITextField!
+	@IBOutlet weak var cancelState: UIButton!
+	@IBOutlet weak var submitState: UIButton!
+	// home has tag 1, dest has tag 0
+	var decideField: Int = 0
 	
 	//This function is called when we click submit
 	@IBAction func submit(_ sender: Any) {
-		mainLoop()
+//		mainLoop()
+		sendText()
+		submitState.isEnabled = false
+		cancelState.isEnabled = true
 	}
+	
+	@IBAction func onCancel(_ sender: Any) {
+		//TODO:terminate loop
+		submitState.isEnabled = true
+		cancelState.isEnabled = false
+	}
+	
 	
 	//This is the main loop that will be running while the app is active.
 	func mainLoop(){
@@ -36,7 +57,8 @@ class ViewController: UIViewController {
 			grabLocation()
 			tenMinuteTimer()
 		}
-		
+		let lastKnownLocation = locationsTuple[locationCounter]
+
 		//The following code is executed when the time has passed
 		
 		//Pseudocode
@@ -77,22 +99,28 @@ class ViewController: UIViewController {
 				//print(location.coordinate.latitude, location.coordinate.longitude)
 				locationsTuple.append((lat: location.coordinate.latitude, long: location.coordinate.longitude))
 				//print(locationsTuple[counter])
-				print(locationsTuple[counter])
+				print(locationsTuple[locationCounter])
 				//                label.text = "Coordiantes: \(locationsTuple[counter])"
 				//                label.numberOfLines = 2
 				//self!.view.addSubview(label)
-				counter += 1
+				locationCounter += 1
 			}
 		}
 	}
 	
 	func sendText(){
 		print("In sendText()")
+		var textMsg: String = "Hey! You friends fucked up, they had gone to " + destinationTextField.text!
+		textMsg += " from " + homeLocation.text!
+//		textMsg += "and were supposed to be back by" + String(userDate.date)
+		textMsg += " They also provided this info of their plans \(extraInfo.text!). Here's the timeline of their trip:"
+		
 		if let accountSID = ProcessInfo.processInfo.environment["TWILIO_SID"],
 		   let authToken = ProcessInfo.processInfo.environment["TWILIO_AUTH"]{
 			
 			let url = "https://api.twilio.com/2010-04-01/Accounts/\(accountSID)/Messages"
-			let parameters = ["From": "18252557134", "To": "17789296671", "Body": "Hello from Swift!"]
+//			let parameters = ["From": "18252557134", "To": "17789296671", "Body": textMsg]
+			let parameters = ["From": "18252557134", "To": contactNumber1.text!, "Body": textMsg] as [String : Any]
 			
 			AF.request(url, method: .post, parameters: parameters)
 				.authenticate(username: accountSID, password: authToken)
@@ -101,15 +129,28 @@ class ViewController: UIViewController {
 				}
 		}
 	}
-	
+
 	// Present the Autocomplete view controller when the button is pressed.
 	@IBAction @objc func autocompleteClicked(_ sender: UITextField) {
+		//coming from dest
+		if (sender.tag == 0) {
+			decideField = 0
+		} else {
+			decideField = 1
+		}
+		
 		let autocompleteController = GMSAutocompleteViewController()
 		autocompleteController.delegate = self
 		
 		// Specify the place data types to return.
-		let fields: GMSPlaceField = GMSPlaceField(rawValue: UInt(GMSPlaceField.name.rawValue) |
-												  UInt(GMSPlaceField.placeID.rawValue))
+//		let fields: GMSPlaceField = GMSPlaceField(rawValue: UInt(GMSPlaceField.name.rawValue) |
+//												  UInt(GMSPlaceField.placeID.rawValue))
+		let fields: GMSPlaceField = GMSPlaceField(rawValue:UInt(GMSPlaceField.name.rawValue) |
+						   UInt(GMSPlaceField.placeID.rawValue) |
+						   UInt(GMSPlaceField.coordinate.rawValue) |
+						   GMSPlaceField.addressComponents.rawValue |
+						   GMSPlaceField.formattedAddress.rawValue)
+		
 		autocompleteController.placeFields = fields
 		
 		// Specify a filter.
@@ -120,16 +161,14 @@ class ViewController: UIViewController {
 		// Display the autocomplete view controller.
 		present(autocompleteController, animated: true, completion: nil)
 	}
-}
-
-extension ViewController: GMSAutocompleteViewControllerDelegate {
 	
 	// Handle the user's selection.
 	func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-		homeLocation.text = place.name
-		print("Place name: \(place.name)")
-		print("Place ID: \(place.placeID)")
-		print("Place attributions: \(place.attributions)")
+		if (decideField == 0) {
+			destinationTextField.text = place.name
+		} else {
+			homeLocation.text = place.name
+		}
 		dismiss(animated: true, completion: nil)
 	}
 	
