@@ -31,6 +31,7 @@ class ViewController: UIViewController, GMSAutocompleteViewControllerDelegate {
 	@IBOutlet weak var contactName1: UITextField!
 	@IBOutlet weak var cancelState: UIButton!
 	@IBOutlet weak var submitState: UIButton!
+	
 	// home has tag 1, dest has tag 0
 	var decideField: Int = 0
 	//coordinate data for homeLocation
@@ -108,6 +109,11 @@ class ViewController: UIViewController, GMSAutocompleteViewControllerDelegate {
 		textMsg += "and were supposed to be back by \(userDate.date) "
 		textMsg += "They also left these notes about what they were doing: \(extraInfo.text!). "
 		textMsg += "Please reach out to them!"
+		textMsg += " This is a timeline of their location: "
+		
+		for location in locationsTuple {
+			textMsg += "\(location.lat), \(location.long), \(location.time) \n"
+		}
 		
 		if let accountSID = ProcessInfo.processInfo.environment["TWILIO_SID"],
 		   let authToken = ProcessInfo.processInfo.environment["TWILIO_AUTH"]{
