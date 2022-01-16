@@ -34,6 +34,8 @@ class ViewController: UIViewController, GMSAutocompleteViewControllerDelegate {
 	@IBOutlet weak var submitState: UIButton!
 	// home has tag 1, dest has tag 0
 	var decideField: Int = 0
+	//coordinate data for homeLocation
+	var homeCoordinates = CLLocationCoordinate2DMake(0, 0)
 	
 	//This function is called when we click submit
 	@IBAction func submit(_ sender: Any) {
@@ -168,6 +170,10 @@ class ViewController: UIViewController, GMSAutocompleteViewControllerDelegate {
 			destinationTextField.text = place.name
 		} else {
 			homeLocation.text = place.name
+			homeCoordinates.longitude = place.coordinate.longitude
+			homeCoordinates.latitude = place.coordinate.latitude
+			print(homeCoordinates.latitude)
+			print(homeCoordinates.longitude)
 		}
 		dismiss(animated: true, completion: nil)
 	}
