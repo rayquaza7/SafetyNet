@@ -153,9 +153,11 @@ class ViewController: UIViewController, GMSAutocompleteViewControllerDelegate {
 		if(status){
 			print("-----THE USER DID NOT RETURN HOME-----")
 			sendText()
+			self.performSegue(withIdentifier: "Text", sender: self)
 		}
 		else{
 			print("-----THE USER DID RETURN HOME SAFE-----")
+			self.performSegue(withIdentifier: "NoText", sender: self)
 		}
 	}
 	
