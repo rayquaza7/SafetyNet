@@ -21,7 +21,7 @@
 
 /* Begin PBXFileReference section */
 		49688E40142FB8288CD543C0 /* Pods-SafetyNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafetyNet.release.xcconfig"; path = "Target Support Files/Pods-SafetyNet/Pods-SafetyNet.release.xcconfig"; sourceTree = "<group>"; };
-		961B5BFC27941BE0007E507D /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		961B5BFC27941BE0007E507D /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		961B5BFE27941C5A007E507D /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = ../../SafetyNet1/SafetyNet/Location.swift; sourceTree = "<group>"; };
 		96BDDA6527941B2C007624DC /* SafetyNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafetyNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96BDDA6827941B2C007624DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };

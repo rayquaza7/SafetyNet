@@ -53,7 +53,7 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "GOOGLE_API"
-            value = "AIzaSyDs7amB4ZwZHS44ByqYx9lKxyxGcIhddGE"
+            value = "AIzaSyBAoof0ERCzN8t5Sug3RMvChs6qurdNvmA"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
