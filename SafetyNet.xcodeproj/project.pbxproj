@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		95C67FB2D8D8BA13C315597D /* libPods-SafetyNet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A292A040D377EFA85F692C9E /* libPods-SafetyNet.a */; };
+		961B5BFB27941BCC007E507D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 961B5BFA27941BCC007E507D /* Alamofire */; };
+		961B5BFD27941BE0007E507D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 961B5BFC27941BE0007E507D /* Podfile */; };
+		961B5BFF27941C5A007E507D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961B5BFE27941C5A007E507D /* Location.swift */; };
+		96BDDA6927941B2C007624DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BDDA6827941B2C007624DC /* AppDelegate.swift */; };
+		96BDDA6B27941B2C007624DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BDDA6A27941B2C007624DC /* SceneDelegate.swift */; };
+		96BDDA6D27941B2C007624DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BDDA6C27941B2C007624DC /* ViewController.swift */; };
+		96BDDA7027941B2C007624DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96BDDA6E27941B2C007624DC /* Main.storyboard */; };
+		96BDDA7227941B2E007624DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96BDDA7127941B2E007624DC /* Assets.xcassets */; };
+		96BDDA7527941B2E007624DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96BDDA7327941B2E007624DC /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		49688E40142FB8288CD543C0 /* Pods-SafetyNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafetyNet.release.xcconfig"; path = "Target Support Files/Pods-SafetyNet/Pods-SafetyNet.release.xcconfig"; sourceTree = "<group>"; };
+		961B5BFC27941BE0007E507D /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		961B5BFE27941C5A007E507D /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = ../../SafetyNet1/SafetyNet/Location.swift; sourceTree = "<group>"; };
+		96BDDA6527941B2C007624DC /* SafetyNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafetyNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96BDDA6827941B2C007624DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		96BDDA6A27941B2C007624DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		96BDDA6C27941B2C007624DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		96BDDA6F27941B2C007624DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		96BDDA7127941B2E007624DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96BDDA7427941B2E007624DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		96BDDA7627941B2E007624DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A292A040D377EFA85F692C9E /* libPods-SafetyNet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SafetyNet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB558E9C09C9287146D3BDAB /* Pods-SafetyNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafetyNet.debug.xcconfig"; path = "Target Support Files/Pods-SafetyNet/Pods-SafetyNet.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96BDDA6227941B2C007624DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				961B5BFB27941BCC007E507D /* Alamofire in Frameworks */,
+				95C67FB2D8D8BA13C315597D /* libPods-SafetyNet.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96BDDA5C27941B2C007624DC = {
+			isa = PBXGroup;
+			children = (
+				961B5BFC27941BE0007E507D /* Podfile */,
+				96BDDA6727941B2C007624DC /* SafetyNet */,
+				96BDDA6627941B2C007624DC /* Products */,
+				E482C04B0CEDEF30C7B09FE9 /* Pods */,
+				DE063A0B3212EB066CB2EC30 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+			usesTabs = 1;
+		};
+		96BDDA6627941B2C007624DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96BDDA6527941B2C007624DC /* SafetyNet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96BDDA6727941B2C007624DC /* SafetyNet */ = {
+			isa = PBXGroup;
+			children = (
+				961B5BFE27941C5A007E507D /* Location.swift */,
+				96BDDA6827941B2C007624DC /* AppDelegate.swift */,
+				96BDDA6A27941B2C007624DC /* SceneDelegate.swift */,
+				96BDDA6C27941B2C007624DC /* ViewController.swift */,
+				96BDDA6E27941B2C007624DC /* Main.storyboard */,
+				96BDDA7127941B2E007624DC /* Assets.xcassets */,
+				96BDDA7327941B2E007624DC /* LaunchScreen.storyboard */,
+				96BDDA7627941B2E007624DC /* Info.plist */,
+			);
+			path = SafetyNet;
+			sourceTree = "<group>";
+		};
+		DE063A0B3212EB066CB2EC30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A292A040D377EFA85F692C9E /* libPods-SafetyNet.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E482C04B0CEDEF30C7B09FE9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB558E9C09C9287146D3BDAB /* Pods-SafetyNet.debug.xcconfig */,
+				49688E40142FB8288CD543C0 /* Pods-SafetyNet.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96BDDA6427941B2C007624DC /* SafetyNet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96BDDA7927941B2E007624DC /* Build configuration list for PBXNativeTarget "SafetyNet" */;
+			buildPhases = (
+				634F07632F0EDE707FEBA8E3 /* [CP] Check Pods Manifest.lock */,
+				96BDDA6127941B2C007624DC /* Sources */,
+				96BDDA6227941B2C007624DC /* Frameworks */,
+				96BDDA6327941B2C007624DC /* Resources */,
+				49517336C2A64DA348304341 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SafetyNet;
+			packageProductDependencies = (
+				961B5BFA27941BCC007E507D /* Alamofire */,
+			);
+			productName = SafetyNet;
+			productReference = 96BDDA6527941B2C007624DC /* SafetyNet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96BDDA5D27941B2C007624DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					96BDDA6427941B2C007624DC = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 96BDDA6027941B2C007624DC /* Build configuration list for PBXProject "SafetyNet" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96BDDA5C27941B2C007624DC;
+			packageReferences = (
+				961B5BF927941BCC007E507D /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = 96BDDA6627941B2C007624DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96BDDA6427941B2C007624DC /* SafetyNet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96BDDA6327941B2C007624DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96BDDA7527941B2E007624DC /* LaunchScreen.storyboard in Resources */,
+				96BDDA7227941B2E007624DC /* Assets.xcassets in Resources */,
+				961B5BFD27941BE0007E507D /* Podfile in Resources */,
+				96BDDA7027941B2C007624DC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49517336C2A64DA348304341 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SafetyNet/Pods-SafetyNet-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SafetyNet/Pods-SafetyNet-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SafetyNet/Pods-SafetyNet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		634F07632F0EDE707FEBA8E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SafetyNet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96BDDA6127941B2C007624DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96BDDA6D27941B2C007624DC /* ViewController.swift in Sources */,
+				96BDDA6927941B2C007624DC /* AppDelegate.swift in Sources */,
+				961B5BFF27941C5A007E507D /* Location.swift in Sources */,
+				96BDDA6B27941B2C007624DC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		96BDDA6E27941B2C007624DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96BDDA6F27941B2C007624DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		96BDDA7327941B2E007624DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96BDDA7427941B2E007624DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96BDDA7727941B2E007624DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		96BDDA7827941B2E007624DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96BDDA7A27941B2E007624DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB558E9C09C9287146D3BDAB /* Pods-SafetyNet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SafetyNet/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = x.SafetyNet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		96BDDA7B27941B2E007624DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49688E40142FB8288CD543C0 /* Pods-SafetyNet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SafetyNet/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = x.SafetyNet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96BDDA6027941B2C007624DC /* Build configuration list for PBXProject "SafetyNet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96BDDA7727941B2E007624DC /* Debug */,
+				96BDDA7827941B2E007624DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96BDDA7927941B2E007624DC /* Build configuration list for PBXNativeTarget "SafetyNet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96BDDA7A27941B2E007624DC /* Debug */,
+				96BDDA7B27941B2E007624DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		961B5BF927941BCC007E507D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = versionRange;
+				maximumVersion = 6.0.0;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		961B5BFA27941BCC007E507D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 961B5BF927941BCC007E507D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 96BDDA5D27941B2C007624DC /* Project object */;
+}
