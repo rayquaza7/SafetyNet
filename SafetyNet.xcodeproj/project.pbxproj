@@ -10,7 +10,7 @@
 		95C67FB2D8D8BA13C315597D /* libPods-SafetyNet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A292A040D377EFA85F692C9E /* libPods-SafetyNet.a */; };
 		961B5BFB27941BCC007E507D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 961B5BFA27941BCC007E507D /* Alamofire */; };
 		961B5BFD27941BE0007E507D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 961B5BFC27941BE0007E507D /* Podfile */; };
-		961B5BFF27941C5A007E507D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961B5BFE27941C5A007E507D /* Location.swift */; };
+		9681C33D279423EF0015FE0E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9681C33C279423EF0015FE0E /* Location.swift */; };
 		96BDDA6927941B2C007624DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BDDA6827941B2C007624DC /* AppDelegate.swift */; };
 		96BDDA6B27941B2C007624DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BDDA6A27941B2C007624DC /* SceneDelegate.swift */; };
 		96BDDA6D27941B2C007624DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BDDA6C27941B2C007624DC /* ViewController.swift */; };
@@ -22,7 +22,7 @@
 /* Begin PBXFileReference section */
 		49688E40142FB8288CD543C0 /* Pods-SafetyNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafetyNet.release.xcconfig"; path = "Target Support Files/Pods-SafetyNet/Pods-SafetyNet.release.xcconfig"; sourceTree = "<group>"; };
 		961B5BFC27941BE0007E507D /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		961B5BFE27941C5A007E507D /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = ../../SafetyNet1/SafetyNet/Location.swift; sourceTree = "<group>"; };
+		9681C33C279423EF0015FE0E /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		96BDDA6527941B2C007624DC /* SafetyNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafetyNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96BDDA6827941B2C007624DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96BDDA6A27941B2C007624DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +71,6 @@
 		96BDDA6727941B2C007624DC /* SafetyNet */ = {
 			isa = PBXGroup;
 			children = (
-				961B5BFE27941C5A007E507D /* Location.swift */,
 				96BDDA6827941B2C007624DC /* AppDelegate.swift */,
 				96BDDA6A27941B2C007624DC /* SceneDelegate.swift */,
 				96BDDA6C27941B2C007624DC /* ViewController.swift */,
@@ -79,6 +78,7 @@
 				96BDDA7127941B2E007624DC /* Assets.xcassets */,
 				96BDDA7327941B2E007624DC /* LaunchScreen.storyboard */,
 				96BDDA7627941B2E007624DC /* Info.plist */,
+				9681C33C279423EF0015FE0E /* Location.swift */,
 			);
 			path = SafetyNet;
 			sourceTree = "<group>";
@@ -224,7 +224,7 @@
 			files = (
 				96BDDA6D27941B2C007624DC /* ViewController.swift in Sources */,
 				96BDDA6927941B2C007624DC /* AppDelegate.swift in Sources */,
-				961B5BFF27941C5A007E507D /* Location.swift in Sources */,
+				9681C33D279423EF0015FE0E /* Location.swift in Sources */,
 				96BDDA6B27941B2C007624DC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
