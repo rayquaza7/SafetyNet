@@ -11,7 +11,7 @@ import Alamofire
 import GooglePlaces
 
 
-var locationsTuple: [(lat: CLLocationDegrees, long: CLLocationDegrees)] = []
+var locationsTuple: [(lat: CLLocationDegrees, long: CLLocationDegrees, time: Date)] = []
 var locationCounter = 0
 
 class ViewController: UIViewController, GMSAutocompleteViewControllerDelegate {
@@ -38,52 +38,38 @@ class ViewController: UIViewController, GMSAutocompleteViewControllerDelegate {
 	
 	//This function is called when we click submit
 	@IBAction func submit(_ sender: Any) {
-		//		mainLoop()
-		//		sendText()
 		submitState.isEnabled = false
 		cancelState.isEnabled = true
-		_ = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(self.mainLoop), userInfo: nil, repeats: true)
-		//Timer to get current locaitons
-		_ = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(self.grabLocation), userInfo: nil, repeats: true)
+		_ = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.mainLoop), userInfo: nil, repeats: true)
+//		//Timer to get current locaitons
+//		_ = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.grabLocation), userInfo: nil, repeats: true)
 	}
 	
 	@IBAction func onCancel(_ sender: Any) {
 		//TODO:terminate loop
 		submitState.isEnabled = true
 		cancelState.isEnabled = false
-		exit(0)
+		exit(status: false)
 	}
 	
-	
+	var stopLoop: Bool = false
 	@objc func mainLoop(){
-		//While the date has not passed
-		//        while(!isDatePassed(userDate: userDate.date)){
-		//            grabLocation()
-		//        }
-		
-		print("Time has not passed")
-		if(isDatePassed(userDate: userDate.date)){
-			print("Time has PASSED")
-			
-			print(locationsTuple)
-			
+		if (isDatePassed(userDate: userDate.date) && !stopLoop){
+			let threshold = 0.005
 			let lastKnownLocation = locationsTuple[locationCounter-1]
-			
-			//        //If this is true, we are home safe
-			if(abs(lastKnownLocation.lat - homeCoordinates.latitude) < 0.001
-			   && abs(lastKnownLocation.long - homeCoordinates.longitude) < 0.001)
+			stopLoop = true
+			if(abs(lastKnownLocation.lat - homeCoordinates.latitude) < threshold
+			   && abs(lastKnownLocation.long - homeCoordinates.longitude) < threshold)
 			{
-				print("WE ARE HOME SAFE and exited!!!")
-				exit(0)
+				self.exit(status: false)
 			}
-			else{
-				print("Ohno we didnt make it back")
-				sendText()
+			else {
+				self.exit(status: true)
 			}
+		} else if (!stopLoop) {
+			self.grabLocation()
 		}
-		
 	}
-	
 	
 	//Return true if the date has passed, OW returns false
 	func isDatePassed(userDate: Date) -> Bool{
@@ -99,7 +85,6 @@ class ViewController: UIViewController, GMSAutocompleteViewControllerDelegate {
 	
 	//grabs the current location of the user
 	@objc func grabLocation() {
-		
 		print("INSIDE GRAB LOCATION")
 		let labelRect = CGRect(x: 50, y: 100, width: 200, height: 100)
 		let label = UILabel(frame: labelRect)
@@ -108,24 +93,21 @@ class ViewController: UIViewController, GMSAutocompleteViewControllerDelegate {
 				guard self != nil else {
 					return
 				}
-				//print(location.coordinate.latitude, location.coordinate.longitude)
-				locationsTuple.append((lat: location.coordinate.latitude, long: location.coordinate.longitude))
-				//print(locationsTuple[counter])
-				//				print(locationsTuple[locationCounter])
-				//                label.text = "Coordiantes: \(locationsTuple[counter])"
-				//                label.numberOfLines = 2
-				//self!.view.addSubview(label)
+				locationsTuple.append((lat: location.coordinate.latitude, long: location.coordinate.longitude, time: location.timestamp))
 				locationCounter += 1
 			}
 		}
 	}
 	
 	func sendText(){
-		//		print("In sendText()")
-		var textMsg: String = "Hey! You friends fucked up, they had gone to " + destinationTextField.text!
-		textMsg += " from " + homeLocation.text!
+		var textMsg: String = "Hey! This is a message from SafetyNet. Your friend John Doe has not returned home by the time they said they would. "
+		textMsg += "Your friend was heading to \(destinationTextField.text!) "
 		//		textMsg += "and were supposed to be back by" + String(userDate.date)
-		textMsg += " They also provided this info of their plans \(extraInfo.text!). Here's the timeline of their trip:"
+		textMsg += "and they left from  \(homeLocation.text!). "
+		textMsg += "at \(locationsTuple[0].time). "
+		textMsg += "and were supposed to be back by \(userDate.date) "
+		textMsg += "They also left these notes about what they were doing: \(extraInfo.text!). "
+		textMsg += "Please reach out to them!"
 		
 		if let accountSID = ProcessInfo.processInfo.environment["TWILIO_SID"],
 		   let authToken = ProcessInfo.processInfo.environment["TWILIO_AUTH"]{
@@ -139,7 +121,7 @@ class ViewController: UIViewController, GMSAutocompleteViewControllerDelegate {
 				.authenticate(username: accountSID, password: authToken)
 				.responseJSON { response in
 					debugPrint(response)
-					exit(0)
+//					self.exit(status: false)
 				}
 			//
 			//			let parameters1 = ["From": "18252557134", "To": contactNumber2.text!, "Body": textMsg] as [String : Any]
@@ -155,7 +137,19 @@ class ViewController: UIViewController, GMSAutocompleteViewControllerDelegate {
 			//				.responseJSON { response in
 			//					debugPrint(response)
 			//				}
-			print("exit")
+		}
+	}
+	
+	
+	//if passed true -> The user did not return home safe. if passed false -> The user returned home safe
+	func exit(status: Bool){
+		print("-----EXITING-----")
+		if(status){
+			print("-----THE USER DID NOT RETURN HOME-----")
+			sendText()
+		}
+		else{
+			print("-----THE USER DID RETURN HOME SAFE-----")
 		}
 	}
 	
