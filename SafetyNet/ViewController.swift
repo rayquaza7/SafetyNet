@@ -42,8 +42,6 @@ class ViewController: UIViewController, GMSAutocompleteViewControllerDelegate {
 		submitState.isEnabled = false
 		cancelState.isEnabled = true
 		_ = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.mainLoop), userInfo: nil, repeats: true)
-//		//Timer to get current locaitons
-//		_ = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.grabLocation), userInfo: nil, repeats: true)
 	}
 	
 	@IBAction func onCancel(_ sender: Any) {
@@ -129,6 +127,10 @@ class ViewController: UIViewController, GMSAutocompleteViewControllerDelegate {
 					debugPrint(response)
 //					self.exit(status: false)
 				}
+			
+			//We can send text to other entered emergency contacts, but we need a upgraded
+			//twilio acct
+			
 			//
 			//			let parameters1 = ["From": "18252557134", "To": contactNumber2.text!, "Body": textMsg] as [String : Any]
 			//			AF.request(url, method: .post, parameters: parameters1)
@@ -173,9 +175,6 @@ class ViewController: UIViewController, GMSAutocompleteViewControllerDelegate {
 		let autocompleteController = GMSAutocompleteViewController()
 		autocompleteController.delegate = self
 		
-		// Specify the place data types to return.
-		//		let fields: GMSPlaceField = GMSPlaceField(rawValue: UInt(GMSPlaceField.name.rawValue) |
-		//												  UInt(GMSPlaceField.placeID.rawValue))
 		let fields: GMSPlaceField = GMSPlaceField(rawValue:UInt(GMSPlaceField.name.rawValue) |
 												  UInt(GMSPlaceField.placeID.rawValue) |
 												  UInt(GMSPlaceField.coordinate.rawValue) |
